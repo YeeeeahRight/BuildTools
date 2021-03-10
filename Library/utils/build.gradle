@@ -27,21 +27,17 @@ dependencies {
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:29.0-jre'
 }
 
 tasks.named('jar') {
 	manifest {
         attributes('Name': project.name,
-			'Version': project.version)
+			'Version': project.version,
+			'Build-Jdk':"${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})",)
     }
 }
 
 tasks.named('test') {
-	
-	
     // Use junit platform for unit tests.
     useJUnitPlatform()
 }
