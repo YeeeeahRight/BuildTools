@@ -6,14 +6,13 @@ package util;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class LibraryTest {
+class StringUtilsTest {
 
-    @Test void testSomeLibraryMethod() {
+    @Test void testIsPositiveNumber() {
         //given
         String numberStr = "4.2";
-        StringUtils stringUtils = new StringUtils();
         //when
-        boolean isPositive = stringUtils.isPositiveNumber(numberStr);
+        boolean isPositive = StringUtils.isPositiveNumber(numberStr);
         //then
         assertTrue(isPositive);
     }

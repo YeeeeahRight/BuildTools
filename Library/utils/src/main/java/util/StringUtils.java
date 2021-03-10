@@ -7,7 +7,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public class StringUtils {
 
-    public boolean isPositiveNumber(String str) {
+    public static boolean isPositiveNumber(String str) {
         double number = NumberUtils.toDouble(str);
         return number > 0;
     }
