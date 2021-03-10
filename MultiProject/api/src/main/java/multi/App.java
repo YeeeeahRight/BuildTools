@@ -3,7 +3,7 @@
  */
 package multi;
 
-import util.Utils;
+import core.Utils;
 
 public class App {
 
